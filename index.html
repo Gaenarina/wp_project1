@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>시군구별 관광 정보 조회 서비스</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel = "stylesheet">
+        <link rel = "stylesheet" href="style.css">
+    </head>
+    <body>
+        <header style="display: flex; justify-content: center;">
+            <img src="images/title_1.png" alt="logo" style="width: 70px; height: 70px;">
+            <h1>시군구별 관광 정보 조회 서비스</h1>
+            <img src="images/title_2.png" alt="logo" style="width: 80px; height: 80px;">
+        </header>
+
+        <div class="container">
+            <div id="map"></div>
+            <div class="select-container" data-role="header">
+                <select id="si" class="form-select" aria-label="시 선택">
+                    <option value="">시 선택</option>
+                    <option value="서울">서울</option>
+                    <option value="인천">인천</option>
+                    <option value="대전">대전</option>
+                    <option value="대구">대구</option>
+                    <option value="광주">광주</option>
+                    <option value="부산">부산</option>
+                    <option value="울산">울산</option>
+                    <option value="세종">세종</option>
+                    <option value="경기">경기도</option>
+                    <option value="강원">강원도</option>
+                    <option value="충북">충청북도</option>
+                    <option value="충남">충청남도</option>
+                    <option value="경북">경상북도</option>
+                    <option value="경남">경상남도</option>
+                    <option value="전북">전라북도</option>
+                    <option value="전남">전라남도</option>
+                    <option value="제주">제주도</option>
+                </select>
+                <select id="gu" class="form-select" aria-label="구 선택">
+                    <option value="">구 선택</option>
+                </select>
+                <select id="type" class="form-select" aria-label="종류 선택">
+                    <option value="">종류 선택</option>
+                    <option value="관광지">관광지</option>
+                    <option value="문화시설">문화시설</option>
+                    <option value="레포츠">레포츠</option>
+                    <option value="숙박">숙박</option>
+                    <option value="쇼핑">쇼핑</option>
+                    <option value="음식">음식</option>
+                </select>
+
+                <input class="btn btn-info" type="button" id="load" value="둘러보기">
+            </div>
+            
+        </div>
+
+        <div class="listContain">
+            <div id="tourlist">
+                <div id="moreinfo"></div>
+            </div>
+        </div>
+        
+        <div class="w_info">
+            <p>학번: 2023810025 이름: 배나현</p>
+        </div>
+
+        <div class="top">
+            <img id="go_top" class="mt-3 mb-3" src="images/top.png" onclick="go_top()" style="width: 50px; height: 50px;">
+        </div>
+
+
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e73fbf470361203623612c190184b77e"></script>
+        <script src="script.js"></script>
+
+    </body>
+</html>
